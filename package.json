@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nedal-Erekat/portfolio-deployment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nedal-Erekat/portfolio-deployment/issues"
+  },
+  "homepage": "https://github.com/Nedal-Erekat/portfolio-deployment#readme",
+  "description": ""
+}
