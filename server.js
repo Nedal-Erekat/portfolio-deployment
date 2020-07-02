@@ -2,17 +2,17 @@
 
 // require('dotenv').config();
 const express = require('express');
-const app = express();
+const server = express();
 
-const PORT =3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('./public'));
+server.use(express.static('./public'));
 
-app.get('/hello', (request, response) => {
-  response.status(200).send('Hello');
+server.get('/hello', (request, response) => {
+  response.send('you are doing great!!');
 });
 
-app.get('/data', (request, response) => {
+server.get('/data', (request, response) => {
   let airplanes = {
     departure: Date.now(),
     canFly: true,
@@ -21,6 +21,6 @@ app.get('/data', (request, response) => {
   response.status(200).json(airplanes);
 });
 
-app.use('*', (request, response) => response.send('Sorry, that route does not exist.'));
+server.use('*', (request, response) => response.send('Sorry, that route does not exist.'));
 
-app.listen(PORT,() => console.log(`Listening on port ${PORT}`));
+server.listen(PORT,() => console.log(`Listening on port ${PORT}`));
